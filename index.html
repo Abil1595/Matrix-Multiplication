@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Multiplication Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Matrix Multiplication Calculator</h1>
+
+        <div id="matrixInput" class="input-container">
+            <div class="input-group">
+                <label for="rowsA">Matrix A rows:</label><br>
+                <input type="number" id="rowsA">
+            </div><br>
+            <div class="input-group">
+                <label for="colsA">Matrix A Columns:</label><br>
+                <input type="number" id="colsA">
+            </div><br>
+            <div class="input-group">
+                <label for="rowsB">Rows for Matrix B:</label><br>
+                <input type="number" id="rowsB">
+            </div><br>
+            <div class="input-group">
+                <label for="colsB">Columns for Matrix B:</label><br>
+                <input type="number" id="colsB">
+            </div><br><br>
+            <button class="btn" onclick="generateMatrixInputs()">Generate Matrices</button>
+        </div>
+
+        <div id="matrixInputs" class="input-container" style="display: none;">
+            <div class="matrix-group">
+                <h2>The First Matrix:</h2>
+                <table id="matrixATable" class="matrix-table"></table>
+            </div>
+            <div class="matrix-group">
+                <h2>The Second Matrix:</h2>
+                <table id="matrixBTable" class="matrix-table"></table>
+            </div>
+            <button class="btn" onclick="multiplyMatrices()">Calculate</button>
+        </div>
+
+        <div id="result" class="result-container" style="display: none;">
+            <h2>Result Matrix:</h2>
+            <table id="resultTable" class="matrix-table"></table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
