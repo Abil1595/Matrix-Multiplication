@@ -6,26 +6,26 @@
     <title>Matrix Multiplication Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
+<body> 
+    <div class="container">  
         <h1>Matrix Multiplication Calculator</h1>
 
         <div id="matrixInput" class="input-container">
             <div class="input-group">
                 <label for="rowsA">Matrix A rows:</label><br>
-                <input type="number" id="rowsA">
+                <input type="number" id="rowsA" class="in">
             </div><br>
             <div class="input-group">
                 <label for="colsA">Matrix A Columns:</label><br>
-                <input type="number" id="colsA">
+                <input type="number" id="colsA" class="in">
             </div><br>
             <div class="input-group">
                 <label for="rowsB">Rows for Matrix B:</label><br>
-                <input type="number" id="rowsB">
+                <input type="number" id="rowsB" class="in">
             </div><br>
             <div class="input-group">
                 <label for="colsB">Columns for Matrix B:</label><br>
-                <input type="number" id="colsB">
+                <input type="number" id="colsB" class="in">
             </div><br><br>
             <button class="btn" onclick="generateMatrixInputs()">Generate Matrices</button>
         </div>
@@ -34,9 +34,9 @@
             <div class="matrix-group">
                 <h2>The First Matrix:</h2>
                 <table id="matrixATable" class="matrix-table"></table>
-            </div>
+            </div>  
             <div class="matrix-group">
-                <h2>The Second Matrix:</h2>
+                <h2>The Second Matrix:</h2> 
                 <table id="matrixBTable" class="matrix-table"></table>
             </div>
             <button class="btn" onclick="multiplyMatrices()">Calculate</button>
@@ -49,5 +49,6 @@
     </div>
 
     <script src="script.js"></script>
+    
 </body>
 </html>

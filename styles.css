@@ -3,10 +3,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-}
+} 
 
 .container {
-    max-width: 800px;
+    max-width: 950px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -53,10 +53,14 @@ h1 {
 }
 
 .matrix-table td {
-    padding: 8px;
+    padding: 8px; 
     border: 1px solid #ccc;
 }
 
 .result-container {
     margin-top: 20px;
+}
+.in 
+{
+    width: 25%;
 }

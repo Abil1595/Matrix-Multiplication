@@ -1,28 +1,33 @@
-function generateMatrixInputs() {
+function generateMatrixInputs()
+ {
     const rowsA = parseInt(document.getElementById("rowsA").value);
     const colsA = parseInt(document.getElementById("colsA").value);
     const rowsB = parseInt(document.getElementById("rowsB").value);
-    const colsB = parseInt(document.getElementById("colsB").value);
-
-    if (isNaN(rowsA) || isNaN(colsA) || isNaN(rowsB) || isNaN(colsB)) {
-        alert("Please enter valid numbers for matrix dimensions.");
+    const colsB = parseInt(document.getElementById("colsB").value); 
+    
+    if (isNaN(rowsA) || isNaN(colsA) || isNaN(rowsB) || isNaN(colsB)) 
+    {  
+        alert("Please enter valid numbers for matrix dimensions");     
         return;
-    }
-
-    if (colsA !== rowsB) {
+    } 
+   
+    if (colsA !== rowsB)      
+     {
         alert("Matrix multiplication not possible. Columns of Matrix A must match rows of Matrix B.");
         return;
     }
-
+ 
     const matrixA = document.getElementById("matrixATable");
     const matrixB = document.getElementById("matrixBTable");
 
     matrixA.innerHTML = "";
     matrixB.innerHTML = "";
 
-    for (let i = 0; i < rowsA; i++) {
+    for (let i = 0; i < rowsA; i++)
+     {
         const row = document.createElement("tr");
-        for (let j = 0; j < colsA; j++) {
+        for (let j = 0; j < colsA; j++) 
+        {
             const cell = document.createElement("td");
             const input = document.createElement("input");
             input.type = "number";
@@ -32,9 +37,11 @@ function generateMatrixInputs() {
         matrixA.appendChild(row);
     }
 
-    for (let i = 0; i < rowsB; i++) {
+    for (let i = 0; i < rowsB; i++) 
+    {
         const row = document.createElement("tr");
-        for (let j = 0; j < colsB; j++) {
+        for (let j = 0; j < colsB; j++) 
+        {
             const cell = document.createElement("td");
             const input = document.createElement("input");
             input.type = "number";
@@ -47,7 +54,8 @@ function generateMatrixInputs() {
     document.getElementById("matrixInputs").style.display = "block";
 }
 
-function multiplyMatrices() {
+function multiplyMatrices() 
+{
     const matrixA = readMatrix("matrixATable");
     const matrixB = readMatrix("matrixBTable");
 
@@ -55,7 +63,8 @@ function multiplyMatrices() {
     displayResult(result);
 }
 
-function readMatrix(tableId) {
+function readMatrix(tableId) 
+{
     const table = document.getElementById(tableId);
     const rows = table.querySelectorAll("tr");
     const matrix = [];
@@ -72,7 +81,8 @@ function readMatrix(tableId) {
     return matrix;
 }
 
-function multiply(matrixA, matrixB) {
+function multiply(matrixA, matrixB)
+ {
     const rowsA = matrixA.length;
     const colsA = matrixA[0].length;
     const colsB = matrixB[0].length;
@@ -94,7 +104,8 @@ function multiply(matrixA, matrixB) {
     return result;
 }
 
-function displayResult(resultMatrix) {
+function displayResult(resultMatrix) 
+{
     const resultTable = document.getElementById("resultTable");
     resultTable.innerHTML = "";
 
@@ -110,3 +121,5 @@ function displayResult(resultMatrix) {
 
     document.getElementById("result").style.display = "block";
 }
+
+
